@@ -7,10 +7,10 @@ switch ($answer) {
     case $answer !== 740 && $answer !== 810 && $answer !== 988 :
         $answer = (int)readline($question);
     case $answer == 740 :
-        echo "Ответ не верный(";
+        echo "Ответ не верный!!!";
         break;
     case $answer == 810:
-        echo "Ответ не правильный(";
+        echo "Ответ не правильный!!!";
         break;
     case $answer == 988 :
         echo "Поздравляю! Ответ верный!";

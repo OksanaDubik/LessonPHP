@@ -1,16 +1,20 @@
 <?php
 $name = readline("Как вас зовут?");
-
-$plan = (int)readline("$name, какое количество задач запланировано на день?");
-
-for($i = 0; $i < $plan; $i++){
-
-    $business[$i] = readline("Какая задача стоит перед вами сегодня?");
-    $time1[$i] = (int)readline("Сколько примерно времени эта задача займет?");
-
-//    $business += $business[$i];
-//    $time1 += $time1[$i];
-    echo "-$business ($time1 ч)\n";
+$amount= (int)readline("Количество задач, запланированных на день?");
+$questions = '';
+$totalTime = 0;
+while($amount<=0 || $amount>10){
+    echo $amount ;
+    echo ", запланируйте количество задач в диапазоне от 0 до 10\n";
+    $amount= (int)readline("Количество задач, запланированных на день?");
 }
-
+while($amount>0 && $amount<=10){
+    for($i=1; $i<=$amount; $i++){
+        $questions .= "-" . readline("Какая задача стоит перед вами сегодня?") . "(" . $time= (int)readline("Сколько примерно времени эта задача займет?") . "ч )\n";
+        $totalTime += $time;
+    };
+    echo "$name, сегодня у вас запланировано $amount приоритетных задачи на день: \n $questions";
+    echo "Примерное время выполнения плана = $totalTime ч\n";
+    break;
+};
 
