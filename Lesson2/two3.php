@@ -9,8 +9,8 @@ switch ($number){
     case 3:
     case 4:
     case 5: echo $text .  $number;
-    break;
-    case 6: $number = ($numeric - 2) % 8;
+        break;
+    case 6: $number = $numeric - 2;
         echo $text . $number;
         break;
     case 7: $number = ($numeric - 4) % 8;
