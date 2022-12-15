@@ -30,4 +30,22 @@ $implodeArr = implode( ", ", $newArray);
 echo "Дорогой $name, от всего сердца поздравляю тебя с днем рождения, желаю $implodeArr $myLastElement!";
 
 
+//ВТОРОЙ ВАРИАНТ//
+//$name = readline("Как зовут именинника?");
+//$wishes = ['чудес', 'случаев', 'приключений', 'путешествий', 'развлечений', 'радостей', 'улыбок', 'почестей', 'озарений'];
+//shuffle($wishes);
+//
+//$epithets = ['сказочных', 'счастливых', 'увлекательных', 'восхитительных', 'ярких', 'отличных', 'искрящихся', 'королевских', 'ярких'];
+//shuffle($epithets);
+//
+//$array = "";
+//$connectArrays = array_combine($epithets, $wishes);
+//$limitArrays = array_slice($connectArrays, 0, 3);
+//
+//foreach ($limitArrays as $epithetsIndex => $wishesValue){
+//    $array  .=  $epithetsIndex . " " . $wishesValue . ",";
+//}
+//
+//echo "Дорогой $name! от всего сердца поздравляю тебя с днем рождения, желаю $array!";
+
 

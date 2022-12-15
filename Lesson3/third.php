@@ -6,3 +6,5 @@ for ($i = 0; $i < 10; $i++){
     $arrThird[] += $arrOne[$i]*$arrTwo[$i];
 }
 print_r ($arrThird);
+
+
