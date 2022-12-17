@@ -38,56 +38,19 @@ $box = [
     ]
 ];
 
-
 function elementSearch($box, $itemName)
 {
-    $boolArr = [];
+
     foreach ($box as $boxValue) {
+        echo($boxValue == $itemName ? "Нашли: " . $itemName . "\n" : "Не нашли: " . $itemName . "\n");
 
-        if (!is_array($boxValue) && $boxValue == $itemName) {
-            $boolArr = ["true"];
-        } else {
-           $boolArr = ["false"];
-        };
-
-       if (is_array($boxValue)){
-        elementSearch($boxValue, $itemName);
+        if (is_array($boxValue)) {
+            elementSearch($boxValue, $itemName);
         }
-
-
-//               if($boxValue == $itemName)
-//               {
-//                   echo "true";
-//               }
-//               else {
-//                   echo "False";
-//               }
-
-//        if (is_array($boxValue){
-//            elementSearch($boxValue, $itemName);
-//        }
     }
-    echo (in_array("true", $boolArr) ? "true" : "false");
-
 }
 
-//
-//    foreach ($box as $boxValue){
-//        if(!is_array($boxValue)) {
-//            foreach ($boxValue as $boxTwoValue) {
-//                if (in_array($itemName, $boxTwoValue, true)) {
-//                    echo "true";
-//                } else {
-//                    echo "False";
-//                }
-//            }
-//        }
-//        else{
-//            elementSearch ($boxValue, $itemName);
-//        }
-//
-//    }
+elementSearch($box, 'Книг');
 
 
-elementSearch($box, 'Настольная игра');
 
