@@ -1,9 +1,16 @@
 <?php
 $array = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2];
 $checkForParity = function ($num) {
-    echo($num % 2 === 0 ? "$num четное" . PHP_EOL : "$num нечетное" . PHP_EOL);
+    if($num % 2 === 0){
+        return "$num четное" . PHP_EOL;
+    }else{
+     return   "$num нечетное" . PHP_EOL;
+    }
 };
-array_map($checkForParity, $array);
+print_r(array_map($checkForParity, $array))  ;
+
+
+
 
 
 //2 Вариант

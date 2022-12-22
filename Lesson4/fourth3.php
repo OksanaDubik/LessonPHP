@@ -42,12 +42,15 @@ function elementSearch($box, $itemName)
 {
 
     foreach ($box as $boxValue) {
-        echo($boxValue == $itemName ? "Нашли: " . $itemName . "\n" : "Не нашли: " . $itemName . "\n");
+        if($boxValue == $itemName){
+            return true;
+        }
 
         if (is_array($boxValue)) {
             elementSearch($boxValue, $itemName);
         }
     }
+    return false;
 }
 
 elementSearch($box, 'Книг');
