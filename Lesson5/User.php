@@ -1,7 +1,7 @@
 <?php
 
-
-class User
+/*закоментила, чтобы не мешал в Ltsson6*/
+//class User
 {
     public string $username;
     public string $email;
